@@ -1,0 +1,26 @@
+{
+  "name": "contacts-app",
+  "version": "1.0.0",
+  "description": "Contact Application using ExpressJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruchi-jain/ContactApp.git"
+  },
+  "keywords": [
+    "nodejs",
+    "contacts"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruchi-jain/ContactApp/issues"
+  },
+  "homepage": "https://github.com/ruchi-jain/ContactApp#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
