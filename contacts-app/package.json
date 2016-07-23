@@ -21,7 +21,12 @@
   },
   "homepage": "https://github.com/ruchi-jain/ContactApp#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.13.1",
+    "mongoose": "^4.5.4",
+    "underscore": "^1.8.3",
+    "validator": "^5.4.0"
   },
   "devDependencies": {
     "chance": "^1.0.3"

@@ -3,6 +3,7 @@
  */
 'use strict';
 
+var _ = require('lodash');
 var initGlobalConfig = function(){
    
     var config = {
@@ -10,8 +11,9 @@ var initGlobalConfig = function(){
              client : {}
         };
     
-    var defaultConfig =require('./env/default');
-    config = defaultConfig;
+    var defaultConfig =require('./env/default'),
+        environment = process.env.NODE_ENV;
+    config = _.extend(defaultConfig, require('./env/' + (environment || 'development')));
     return config;
 };
 
