@@ -71,13 +71,32 @@ module.exports.getContacts = function (req, res) {
     });
 }
 
+module.exports.getContact = function(req, res){
+    var id = req.metadata.contactId;
+    contactService.findContactById(id,function (foundContact) {
+        if (foundContact) {
+            res.status(200);
+            res.json(foundContact);
+            res.end;
+        }
+        else {
+            res
+                .status(400)
+                .send({message: 'Error: Unable to find Contact with id ' + id});
+            return;
+        }
+    });
+}
+
 module.exports.createContact = function (req, res) {
     var contact = req.body;
     contactService.saveContact(contact, function (err, contact) {
         if (err) {
+            
             res
                 .status(400)
                 .send({message: "Error: Internal error while saving data. Please try again later"})
+            return;
         } else
         {
             res
@@ -132,4 +151,36 @@ module.exports.validateContactIdAndForward = function (req, res, next, id) {
         }
     });
     next();
+}
+
+module.exports.FindTopContacts = function(req,res){
+    contactService.findTopContacts(function (foundContact) {
+        if (foundContact) {
+            res.status(200);
+            res.json(foundContact);
+            res.end;
+        }
+        else {
+            res
+                .status(400)
+                .send({message: 'Error: Unable to find Contact'});
+            return;
+        }
+    });
+}
+
+module.exports.getContactsWithCity = function(req,res) {
+    contactService.getPhoneWithCity(function (foundContact) {
+        if (foundContact) {
+            res.status(200);
+            res.json(foundContact);
+            res.end;
+        }
+        else {
+            res
+                .status(400)
+                .send({message: 'Error: Unable to find Contact'});
+            return;
+        }
+    })
 }
