@@ -3,8 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Contacts Application</title>
+    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+
+
 </head>
-<body>
-<h1>Hello World</h1>
+<body ng-app="contactApp">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Contact APP</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Create Contact</a></li>
+            <li><a href="#">Show Contact</a></li>
+            <li><a href="#">Delete Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+<!-- <label for="">Name:</label>
+<input type="text" ng-model="name">
+<div class="container-ctrl1" ng-controller="ctrl1">
+
+    <div class="container-ctrl2" ng-controller="ctrl2">
+        {{name}}
+        </div>
+</div>
+<div class="container-ctrl3" ng-controller="ctrl3">
+    <label for="">Name:</label>
+    <input type="text" ng-model="name">
+    {{name}}
+</div>
+
+<script src="/public/lib/angular/angular.min.js"></script>
+<script>
+    angular.module('contactApp',[])
+            .controller('ctrl1',function(){})
+            .controller('ctrl2',function(){})
+            .controller('ctrl3',function(){})
+
+</script>  -->
+<script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/public/lib/jquery/dist/jquery.min.js"></script>
+<script src="/public/lib/angular/angular.min.js"></script>
+<script src="/modules/core/client/app/config.js"></script>
+<script src="/modules/core/client/controllers/simpleController.js"></script>
+
 </body>
 </html>

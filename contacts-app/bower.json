@@ -1,0 +1,19 @@
+{
+  "name": "contacts-app",
+  "description": "Contact Application using ExpressJS",
+  "main": "server.js",
+  "authors": [
+    "Ruchi Goel <ruchi.goel@outlook.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "nodejs",
+    "contacts"
+  ],
+  "homepage": "https://github.com/ruchi-jain/ContactApp",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.6"
+  }
+}
