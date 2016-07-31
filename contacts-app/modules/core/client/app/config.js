@@ -3,11 +3,11 @@
  */
 'use strict';
 
-var ApplicationConfiguration = (function(){
+var ApplicationConfiguration = (function(){  //one single global variable
         
-        var _applicationModuleName = 'ContactsApp';
+        var _applicationModuleName = 'ContactsApp';  //super modue
         
-        var _applicationDependencies = [];
+        var _applicationDependencies = ['ui.router'];
         
         var _registerModule = function(moduleName, dependencies){
             //create angular module
