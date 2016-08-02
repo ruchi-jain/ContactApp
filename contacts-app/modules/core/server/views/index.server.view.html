@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ContactsApp" >
 <head>
     <meta charset="UTF-8">
     <title>Contacts Application</title>
@@ -9,19 +9,15 @@
 </head>
 <body >
 
+        <div ng-include="'/modules/core/client/views/navigation.core.tpl.html'">
 
-    <div class="container-fluid">
 
-        <div ng-controller="ContactsCntrl">
-            <p ng-bind = "name"></p>
-            <p> Name: {{name}}</p>
         </div>
-    </div>
-
+        <div ui-view></div>
 
 <!-- Vender libraries -->
 
-<script src="/public/lib/jquery/dist/jquery.min.js"></script>
+        <script src="/public/lib/jquery/dist/jquery.min.js"></script>
     <script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/public/lib/angular/angular.min.js"></script>
     <script src="/public/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -31,7 +27,9 @@
 <script src="/modules/core/client/app/config.js"></script>
 <script src="/modules/core/client/app/init.js"></script>
 <script src="/modules/core/client/core.client.module.js"></script>
-<script src="/modules/core/client/controllers/core.client.controller.js"></script>
+ <script src="/modules/core/client/routes/core.client.route.js"></script>
+        <script src="/modules/core/client/services/core.client.service.js"></script>
+ <script src="/modules/core/client/controllers/core.client.controller.js"></script>
 
 </body>
 </html>

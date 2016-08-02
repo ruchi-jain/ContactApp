@@ -1,0 +1,25 @@
+<div class="grid-contacts-container" ng-controller="ContactsCntrl">
+
+<table class="table">
+    <thead>
+    <tr >
+        <th ng-repeat="field in fields" ng-bind="field"></th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="contact in contacts ">
+        <td ng-repeat="(key,value) in contact" ng-bind="value">1</td>
+       <td> <a href="#">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </a></td>
+        <td> <a href="#">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a></td>
+    </tr>
+
+    </tbody>
+</table>
+
+    </div>
